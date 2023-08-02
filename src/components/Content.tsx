@@ -120,7 +120,7 @@ export function Content() {
           key={index}
         >
           <img
-            className="aspect-square   w-full  object-cover"
+            className="aspect-square  w-full  object-cover"
             //         ^ when changing this, change the other things too
             src={"/hq720.jpg"} // todo
             alt={podcast.title}

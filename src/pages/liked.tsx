@@ -8,7 +8,7 @@ import { api } from "~/utils/api";
 import { todo } from "~/utils/todo";
 
 const Home: NextPage = () => {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const hello = api.mdParser.submitWebsite.useQuery({ text: "from tRPC" });
   const [open, setOpen] = useState(false);
   return (
     <>
