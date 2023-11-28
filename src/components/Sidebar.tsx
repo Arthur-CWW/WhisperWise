@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { MdSurroundSound } from "react-icons/md";
 import { useState } from "react";
 import {
   HiBookmark,
@@ -28,7 +29,6 @@ export function Sidebar() {
       link: "/create",
       icon: <HiOutlinePlus />,
     },
-    //saved albums
     {
       id: 6,
       name: "Saved Albums",
@@ -58,33 +58,34 @@ export function Sidebar() {
           Smart Cast
         </Link>
         {Pages.map((page) => (
-          <HoverBgColor key={page.id} isSelected={selected === page.name}>
-            <Link
-              href={page.link}
-              className={"flex items-center gap-1 text-xs capitalize "}
-              onClick={() => setSelected(page.name)}
-            >
+          <Link
+            key={page.id}
+            href={page.link}
+            className={"flex items-center gap-1 text-xs capitalize "}
+            onClick={() => setSelected(page.name)}
+          >
+            <HoverBgColor isSelected={selected === page.name}>
               {page.icon}
               {page.name}
-            </Link>
-          </HoverBgColor>
+            </HoverBgColor>
+          </Link>
         ))}
       </ul>
       <ul className="flex justify-between ">
         {BottomPages.map((page) => (
-          <HoverBgColor key={page.id} isSelected={selected === page.name}>
-            <Link
-              key={page.id}
-              href={page.link}
-              className={
-                "flex items-center justify-center gap-1 text-xs capitalize"
-              }
-              onClick={() => setSelected(page.name)}
-            >
+          <Link
+            key={page.id}
+            href={page.link}
+            className={
+              "flex items-center justify-center gap-1 text-xs capitalize"
+            }
+            onClick={() => setSelected(page.name)}
+          >
+            <HoverBgColor isSelected={selected === page.name}>
               {page.icon}
               {page.name}
-            </Link>
-          </HoverBgColor>
+            </HoverBgColor>
+          </Link>
         ))}
       </ul>
     </nav>
