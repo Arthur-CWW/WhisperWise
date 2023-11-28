@@ -11,7 +11,6 @@ import {
   HiSearch,
 } from "react-icons/hi";
 import { HoverBgColor } from "../pages";
-
 export function Sidebar() {
   const Pages = [
     { id: 1, name: "Home", link: "/", icon: <HiHome /> },
