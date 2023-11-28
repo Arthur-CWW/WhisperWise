@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <body>
+      <>
         <header
           className=" font-baseline flex h-12 w-full
           justify-center bg-cyan-900  px-1 text-white"
@@ -105,7 +105,7 @@ const Home: NextPage = () => {
           {hello.data && <p>{hello.data.greeting}</p>}
           <Content />
         </main>
-      </body>
+      </>
     </>
   );
 };
