@@ -7,5 +7,7 @@ Todo
 	- [] Parse website into markdown files
 	- [] Parse markdow into audio chapters and timestamps, and audio track
 - Add other pages
-- [] Add about page
+	- [] Add about page
+	- [] Add liked/favourite playlist
+	-	[]
 
