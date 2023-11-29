@@ -11,36 +11,40 @@ import {
   HiOutlinePlus,
   HiSearch,
 } from "react-icons/hi";
+import { PiQueue } from "react-icons/pi";
+
 import { HoverBgColor } from "../pages";
 export function Sidebar() {
   const Pages = [
-    { id: 1, name: "Home", link: "/", icon: <HiHome /> },
-    { id: 2, name: "Search", link: "/search", icon: <HiSearch /> },
+    { name: "Home", link: "/", icon: <HiHome /> },
+    { name: "Discover", link: "/search", icon: <HiSearch /> },
     {
-      id: 3,
       name: "Your Library",
       link: "/library",
       icon: <HiOutlineCollection />,
     },
-    { id: 4, name: "Liked Songs", link: "/liked", icon: <HiOutlineHeart /> },
+    { name: "Liked Songs", link: "/liked", icon: <HiOutlineHeart /> },
     {
-      id: 5,
       name: "Create Playlist",
-      link: "/create",
+      link: "/playlists",
       icon: <HiOutlinePlus />,
     },
     {
-      id: 6,
-      name: "Saved Albums",
-      link: "/saved",
-      icon: <HiBookmark />,
+      name: "Queue",
+      link: "/playing",
+      icon: <PiQueue />,
     },
+    // {
+    //   id: 6,
+    //   name: "Saved Playlists",
+    //   link: "/saved",
+    //   icon: <HiBookmark />,
+    // },
   ];
   const BottomPages = [
-    { id: 7, name: "Settings", link: "/profile", icon: <HiCog /> },
+    { name: "Settings", link: "/profile", icon: <HiCog /> },
     {
-      id: 8,
-      name: "Sign in",
+      name: "Sign in", //TODO
       link: "/api/auth/signin",
       icon: <HiOutlineKey />,
     },
@@ -59,7 +63,7 @@ export function Sidebar() {
         </Link>
         {Pages.map((page) => (
           <Link
-            key={page.id}
+            key={page.name}
             href={page.link}
             className={"flex items-center gap-1 text-xs capitalize "}
             onClick={() => setSelected(page.name)}
@@ -74,7 +78,7 @@ export function Sidebar() {
       <ul className="flex justify-between ">
         {BottomPages.map((page) => (
           <Link
-            key={page.id}
+            key={page.name}
             href={page.link}
             className={
               "flex items-center justify-center gap-1 text-xs capitalize"
