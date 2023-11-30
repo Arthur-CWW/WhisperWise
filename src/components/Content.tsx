@@ -93,24 +93,7 @@ const POD_DATA = [
     author: "Sean Carroll",
   },
 ] as const;
-// Row Renderer
-// margin: 0 16px
-// width: 100%
-// Thumbnail
-//
-// style attribute {
-//   --ytd-rich-grid-item-max-width: 500px;
-//   --ytd-rich-grid-item-min-width: 310px;
-// dynamic
-//   --ytd-rich-grid-items-per-row: 5;
-// --ytd-rich-grid-posts-per-row: 5;
-// --ytd-rich-grid-slim-items-per-row: 7;
-// --ytd-rich-grid-game-cards-per-row: 7;
-// }
 export function Content() {
-  // cannot extract the following into javascript, since it will break hydration
-  // aspect-square: (a) 200px (b) max-w-xs
-  // aspect-video: (a) 294px (b) max-w-md
   return (
     <div className="m-4 grid max-w-full grid-cols-[repeat(auto-fill,minmax(200px,1fr))] content-start gap-4">
       {POD_DATA.map((podcast, index) => (
